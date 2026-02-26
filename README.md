@@ -1,4 +1,4 @@
-# DCASE-TASK-2-Industrial-Sound-AD
+# DCASE TASK-2 Industrial Sound AD
 End-to-end unsupervised anomaly detection pipeline for industrial machines under domain shift - transfer learning with PANNs, inverse-Mel features, and domain-aware k-NN scoring.
 
 # Industrial Anomaly Sound Detection — DCASE 2025 Task 2
