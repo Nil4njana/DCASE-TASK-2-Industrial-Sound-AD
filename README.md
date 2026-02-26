@@ -1,7 +1,7 @@
 # DCASE-TASK-2-Industrial-Sound-AD
 End-to-end unsupervised anomaly detection pipeline for industrial machines under domain shift - transfer learning with PANNs, inverse-Mel features, and domain-aware k-NN scoring.
 
-# 🔊 Industrial Anomaly Sound Detection — DCASE 2025 Task 2
+# Industrial Anomaly Sound Detection — DCASE 2025 Task 2
 
 ## Problem Statement
 
@@ -24,7 +24,7 @@ two hard constraints:
 - **Layer 4**: Domain-aware + section-aware z-score normalization
 - **Output**: Final anomaly score per audio clip
 
-## 📊 Results
+## Results
 
 - **Average AUC**: 57.16% across 7 machines (baseline: 50.00%)
 - **Best machine**: Valve — 71.25% AUC, 28.90% pAUC, 41.12% official score
