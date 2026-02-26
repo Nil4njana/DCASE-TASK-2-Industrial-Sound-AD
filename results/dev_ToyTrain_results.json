@@ -1,0 +1,11 @@
+{
+  "machine": "dev_ToyTrain",
+  "auc_overall": 57.199999999999996,
+  "pauc": 7.8,
+  "official_score": 13.728,
+  "auc_source": 68.12,
+  "auc_target": 63.080000000000005,
+  "num_train": 1100,
+  "num_test": 200,
+  "time_minutes": 6.481995515028635
+}

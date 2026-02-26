@@ -1,0 +1,11 @@
+{
+  "machine": "dev_valve",
+  "auc_overall": 71.25,
+  "pauc": 28.900000000000002,
+  "official_score": 41.12081877184223,
+  "auc_source": 86.52,
+  "auc_target": 62.92000000000001,
+  "num_train": 1100,
+  "num_test": 200,
+  "time_minutes": 6.159654370943705
+}

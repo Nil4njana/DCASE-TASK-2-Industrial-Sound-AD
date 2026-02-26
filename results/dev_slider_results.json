@@ -1,0 +1,11 @@
+{
+  "machine": "dev_slider",
+  "auc_overall": 55.18000000000001,
+  "pauc": 6.6000000000000005,
+  "official_score": 11.789834898025253,
+  "auc_source": 61.56,
+  "auc_target": 49.72,
+  "num_train": 1100,
+  "num_test": 200,
+  "time_minutes": 6.079391725858053
+}

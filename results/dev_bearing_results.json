@@ -1,0 +1,11 @@
+{
+  "machine": "dev_bearing",
+  "auc_overall": 52.49999999999999,
+  "pauc": 8.0,
+  "official_score": 13.884297520661157,
+  "auc_source": 58.160000000000004,
+  "auc_target": 48.64,
+  "num_train": 1100,
+  "num_test": 200,
+  "time_minutes": 5.860968629519145
+}

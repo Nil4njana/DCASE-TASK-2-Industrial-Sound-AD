@@ -1,0 +1,11 @@
+{
+  "machine": "dev_fan",
+  "auc_overall": 54.17000000000001,
+  "pauc": 2.3,
+  "official_score": 4.412643881707101,
+  "auc_source": 60.72,
+  "auc_target": 46.519999999999996,
+  "num_train": 1100,
+  "num_test": 200,
+  "time_minutes": 6.723786524931589
+}

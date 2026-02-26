@@ -1,0 +1,51 @@
+{
+  "base_path": "/kaggle/input/dcase-dataset-2025/development/development",
+  "machines": [
+    "dev_fan",
+    "dev_gearbox",
+    "dev_bearing",
+    "dev_slider",
+    "dev_ToyCar",
+    "dev_ToyTrain",
+    "dev_valve"
+  ],
+  "audio": {
+    "sample_rate": 16000,
+    "audio_len": 160000,
+    "stft_sizes": [
+      256,
+      1024,
+      4096
+    ],
+    "fmin": 500,
+    "fmax": 4000
+  },
+  "supplemental": {
+    "use_supplemental": true,
+    "max_samples": 500,
+    "weight": 0.5
+  },
+  "attributes": {
+    "use_attributes": true,
+    "section_normalization": true,
+    "domain_weighting": true
+  },
+  "model": {
+    "embedding_dim": 2048,
+    "k_values": [
+      1,
+      3,
+      5,
+      7,
+      10
+    ],
+    "k_weights": [
+      0.1,
+      0.2,
+      0.4,
+      0.2,
+      0.1
+    ],
+    "mahalanobis_weight": 0.4
+  }
+}

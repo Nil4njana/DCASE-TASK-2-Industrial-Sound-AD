@@ -1,0 +1,280 @@
+2026-01-20 06:37:49 | INFO | ================================================================================
+2026-01-20 06:37:49 | INFO | 🚀 DCASE 2025 Anomaly Detection - PANNs + 4-Layer Strategy
+2026-01-20 06:37:49 | INFO | ================================================================================
+2026-01-20 06:37:49 | INFO | Run ID: 20260120_063740
+2026-01-20 06:37:49 | INFO | Run Directory: /kaggle/working/run_20260120_063740
+2026-01-20 06:37:49 | INFO | Log File: /kaggle/working/run_20260120_063740/logs/experiment.log
+2026-01-20 06:37:49 | INFO | 🖥️  Device: cuda
+2026-01-20 06:37:49 | INFO | 🔧 PyTorch version: 2.8.0+cu126
+2026-01-20 06:37:49 | INFO | 🔧 CUDA available: True
+2026-01-20 06:37:49 | INFO | 🔧 GPU: Tesla T4
+2026-01-20 06:37:49 | INFO | 🔧 GPU Memory: 15.83 GB
+2026-01-20 06:37:49 | INFO | 
+✅ Libraries imported and logger initialized successfully!
+2026-01-20 06:37:49 | INFO | 
+📋 Configuration:
+2026-01-20 06:37:49 | INFO |   Base Path: /kaggle/input/dcase-dataset-2025/development/development
+2026-01-20 06:37:49 | INFO |   Output Directory: /kaggle/working/run_20260120_063740
+2026-01-20 06:37:49 | INFO |   Number of Machines: 7
+2026-01-20 06:37:49 | INFO |   Machines: dev_fan, dev_gearbox, dev_bearing, dev_slider, dev_ToyCar, dev_ToyTrain, dev_valve
+2026-01-20 06:37:49 | INFO | 
+🎵 Audio Processing:
+2026-01-20 06:37:49 | INFO |   Sample Rate: 16000 Hz
+2026-01-20 06:37:49 | INFO |   Audio Length: 160000 samples (10.0 sec)
+2026-01-20 06:37:49 | INFO |   STFT Sizes: [256, 1024, 4096]
+2026-01-20 06:37:49 | INFO |   Spectrogram Shape: (3, 128, 320)
+2026-01-20 06:37:49 | INFO |   Frequency Range: 500-4000 Hz
+2026-01-20 06:37:49 | INFO | 
+🆕 Enhanced Features:
+2026-01-20 06:37:49 | INFO |   Use Supplemental Data: True
+2026-01-20 06:37:49 | INFO |     - Max Supplemental Samples: 500
+2026-01-20 06:37:49 | INFO |     - Supplemental Weight: 0.5
+2026-01-20 06:37:49 | INFO |   Use Attributes Metadata: True
+2026-01-20 06:37:49 | INFO |     - Section Normalization: True
+2026-01-20 06:37:49 | INFO |     - Domain Weighting: True
+2026-01-20 06:37:49 | INFO | 
+🧠 Model & Detection:
+2026-01-20 06:37:49 | INFO |   Backbone: PANNs CNN14 (pre-trained)
+2026-01-20 06:37:49 | INFO |   Embedding Dimension: 2048
+2026-01-20 06:37:49 | INFO |   k-NN k values: [1, 3, 5, 7, 10]
+2026-01-20 06:37:49 | INFO |   k-NN weights: [0.1, 0.2, 0.4, 0.2, 0.1]
+2026-01-20 06:37:49 | INFO |   Mahalanobis enabled: True
+2026-01-20 06:37:49 | INFO |   Score normalization: True
+2026-01-20 06:37:49 | INFO | 
+💾 Saving Options:
+2026-01-20 06:37:49 | INFO |   Save Embeddings: True
+2026-01-20 06:37:49 | INFO |   Save Plots: True
+2026-01-20 06:37:49 | INFO |   Save Detailed Results: True
+2026-01-20 06:37:49 | INFO | 
+💾 Configuration saved to: /kaggle/working/run_20260120_063740/logs/config.json
+2026-01-20 06:37:49 | INFO | 
+✅ Configuration loaded successfully!
+2026-01-20 06:38:03 | INFO | 
+✅ Enhanced dataset class loaded successfully!
+2026-01-20 06:38:04 | INFO | ✅ PANNs feature extractor loaded successfully!
+2026-01-20 06:38:04 | INFO | ✅ Enhanced 4-layer anomaly detector loaded successfully!
+2026-01-20 06:38:04 | INFO | ✅ Evaluation and visualization functions loaded successfully!
+2026-01-20 06:38:04 | INFO | ✅ Main evaluation function loaded successfully!
+2026-01-20 06:38:04 | INFO | 
+🔧 Initializing PANNs CNN14 model...
+2026-01-20 06:41:14 | INFO | ✅ PANNs CNN14 loaded successfully!
+2026-01-20 06:41:14 | INFO |    Model device: cuda
+2026-01-20 06:41:14 | INFO |    Pre-trained on AudioSet (2M audio clips)
+2026-01-20 06:41:14 | INFO |    Output embedding dimension: 2048
+2026-01-20 06:41:14 | INFO | 
+🎵 Extracting features for train split...
+2026-01-20 06:47:12 | INFO | ✅ Feature extraction complete for train
+2026-01-20 06:47:12 | INFO |    Embeddings shape: (1100, 2048)
+2026-01-20 06:47:12 | INFO |    Time: 357.0s (3.1 samples/s)
+2026-01-20 06:47:12 | INFO |    Mean embedding norm: 11.375
+2026-01-20 06:47:12 | INFO |    Std embedding norm: 1.022
+2026-01-20 06:47:12 | INFO | 
+🎵 Extracting features for test split...
+2026-01-20 06:47:56 | INFO | ✅ Feature extraction complete for test
+2026-01-20 06:47:56 | INFO |    Embeddings shape: (200, 2048)
+2026-01-20 06:47:56 | INFO |    Time: 44.0s (4.5 samples/s)
+2026-01-20 06:47:56 | INFO |    Mean embedding norm: 11.386
+2026-01-20 06:47:56 | INFO |    Std embedding norm: 0.801
+2026-01-20 06:47:56 | INFO | 
+🎯 Fitting anomaly detector...
+2026-01-20 06:47:56 | INFO |    Training samples: 1100
+2026-01-20 06:47:56 | INFO |    Embedding dimension: 2048
+2026-01-20 06:47:56 | INFO |    Unique sections: 1
+2026-01-20 06:47:56 | INFO |    Domain 0 baseline: μ=1.6601, σ=0.5456, n=990
+2026-01-20 06:47:56 | INFO |    Domain 1 baseline: μ=1.7719, σ=0.4979, n=110
+2026-01-20 06:47:56 | INFO |    Section-specific stats computed for 1 sections
+2026-01-20 06:47:56 | INFO | 
+🔮 Computing anomaly scores...
+2026-01-20 06:47:56 | INFO |    Test samples: 200
+2026-01-20 06:47:56 | INFO |    Layer 1 (Multi-k): 0.12s
+2026-01-20 06:47:57 | INFO |    Layer 2 (Mahalanobis): 1.11s
+2026-01-20 06:47:57 | INFO |    Layer 3 (Fusion): Combined
+2026-01-20 06:47:57 | INFO |    Layer 4a (Domain norm): 0.00s
+2026-01-20 06:47:57 | INFO |    Layer 4b (Section norm): 0.00s
+2026-01-20 06:47:57 | INFO |    Final score range: [-9.138, -5.944]
+2026-01-20 06:47:58 | INFO | 
+🎵 Extracting features for train split...
+2026-01-20 06:52:55 | INFO | ✅ Feature extraction complete for train
+2026-01-20 06:52:55 | INFO |    Embeddings shape: (1100, 2048)
+2026-01-20 06:52:55 | INFO |    Time: 297.0s (3.7 samples/s)
+2026-01-20 06:52:55 | INFO |    Mean embedding norm: 10.979
+2026-01-20 06:52:55 | INFO |    Std embedding norm: 0.476
+2026-01-20 06:52:55 | INFO | 
+🎵 Extracting features for test split...
+2026-01-20 06:53:46 | INFO | ✅ Feature extraction complete for test
+2026-01-20 06:53:46 | INFO |    Embeddings shape: (200, 2048)
+2026-01-20 06:53:46 | INFO |    Time: 50.9s (3.9 samples/s)
+2026-01-20 06:53:46 | INFO |    Mean embedding norm: 11.013
+2026-01-20 06:53:46 | INFO |    Std embedding norm: 0.451
+2026-01-20 06:53:46 | INFO | 
+🎯 Fitting anomaly detector...
+2026-01-20 06:53:46 | INFO |    Training samples: 1100
+2026-01-20 06:53:46 | INFO |    Embedding dimension: 2048
+2026-01-20 06:53:46 | INFO |    Unique sections: 1
+2026-01-20 06:53:46 | INFO |    Domain 0 baseline: μ=1.3125, σ=0.8852, n=990
+2026-01-20 06:53:46 | INFO |    Domain 1 baseline: μ=1.3108, σ=0.9121, n=110
+2026-01-20 06:53:46 | INFO |    Section-specific stats computed for 1 sections
+2026-01-20 06:53:46 | INFO | 
+🔮 Computing anomaly scores...
+2026-01-20 06:53:46 | INFO |    Test samples: 200
+2026-01-20 06:53:46 | INFO |    Layer 1 (Multi-k): 0.12s
+2026-01-20 06:53:48 | INFO |    Layer 2 (Mahalanobis): 1.07s
+2026-01-20 06:53:48 | INFO |    Layer 3 (Fusion): Combined
+2026-01-20 06:53:48 | INFO |    Layer 4a (Domain norm): 0.00s
+2026-01-20 06:53:48 | INFO |    Layer 4b (Section norm): 0.00s
+2026-01-20 06:53:48 | INFO |    Final score range: [-3.146, -1.889]
+2026-01-20 06:53:48 | INFO | 
+🎵 Extracting features for train split...
+2026-01-20 06:58:41 | INFO | ✅ Feature extraction complete for train
+2026-01-20 06:58:41 | INFO |    Embeddings shape: (1100, 2048)
+2026-01-20 06:58:41 | INFO |    Time: 292.7s (3.8 samples/s)
+2026-01-20 06:58:41 | INFO |    Mean embedding norm: 10.966
+2026-01-20 06:58:41 | INFO |    Std embedding norm: 0.539
+2026-01-20 06:58:41 | INFO | 
+🎵 Extracting features for test split...
+2026-01-20 06:59:37 | INFO | ✅ Feature extraction complete for test
+2026-01-20 06:59:37 | INFO |    Embeddings shape: (200, 2048)
+2026-01-20 06:59:37 | INFO |    Time: 56.8s (3.5 samples/s)
+2026-01-20 06:59:37 | INFO |    Mean embedding norm: 10.940
+2026-01-20 06:59:37 | INFO |    Std embedding norm: 0.477
+2026-01-20 06:59:37 | INFO | 
+🎯 Fitting anomaly detector...
+2026-01-20 06:59:37 | INFO |    Training samples: 1100
+2026-01-20 06:59:37 | INFO |    Embedding dimension: 2048
+2026-01-20 06:59:37 | INFO |    Unique sections: 1
+2026-01-20 06:59:38 | INFO |    Domain 0 baseline: μ=1.3331, σ=0.6620, n=1090
+2026-01-20 06:59:38 | INFO |    Domain 1 baseline: μ=1.7044, σ=0.5086, n=10
+2026-01-20 06:59:38 | INFO |    Section-specific stats computed for 1 sections
+2026-01-20 06:59:38 | INFO | 
+🔮 Computing anomaly scores...
+2026-01-20 06:59:38 | INFO |    Test samples: 200
+2026-01-20 06:59:38 | INFO |    Layer 1 (Multi-k): 0.12s
+2026-01-20 06:59:39 | INFO |    Layer 2 (Mahalanobis): 1.06s
+2026-01-20 06:59:39 | INFO |    Layer 3 (Fusion): Combined
+2026-01-20 06:59:39 | INFO |    Layer 4a (Domain norm): 0.00s
+2026-01-20 06:59:39 | INFO |    Layer 4b (Section norm): 0.00s
+2026-01-20 06:59:39 | INFO |    Final score range: [-7.063, -2.969]
+2026-01-20 06:59:39 | INFO | 
+🎵 Extracting features for train split...
+2026-01-20 07:04:46 | INFO | ✅ Feature extraction complete for train
+2026-01-20 07:04:46 | INFO |    Embeddings shape: (1100, 2048)
+2026-01-20 07:04:46 | INFO |    Time: 306.5s (3.6 samples/s)
+2026-01-20 07:04:46 | INFO |    Mean embedding norm: 10.992
+2026-01-20 07:04:46 | INFO |    Std embedding norm: 0.474
+2026-01-20 07:04:46 | INFO | 
+🎵 Extracting features for test split...
+2026-01-20 07:05:42 | INFO | ✅ Feature extraction complete for test
+2026-01-20 07:05:42 | INFO |    Embeddings shape: (200, 2048)
+2026-01-20 07:05:42 | INFO |    Time: 56.3s (3.6 samples/s)
+2026-01-20 07:05:42 | INFO |    Mean embedding norm: 10.926
+2026-01-20 07:05:42 | INFO |    Std embedding norm: 0.459
+2026-01-20 07:05:42 | INFO | 
+🎯 Fitting anomaly detector...
+2026-01-20 07:05:42 | INFO |    Training samples: 1100
+2026-01-20 07:05:42 | INFO |    Embedding dimension: 2048
+2026-01-20 07:05:42 | INFO |    Unique sections: 1
+2026-01-20 07:05:43 | INFO |    Domain 0 baseline: μ=1.4122, σ=0.4785, n=990
+2026-01-20 07:05:43 | INFO |    Domain 1 baseline: μ=1.2305, σ=0.3872, n=110
+2026-01-20 07:05:43 | INFO |    Section-specific stats computed for 1 sections
+2026-01-20 07:05:43 | INFO | 
+🔮 Computing anomaly scores...
+2026-01-20 07:05:43 | INFO |    Test samples: 200
+2026-01-20 07:05:43 | INFO |    Layer 1 (Multi-k): 0.12s
+2026-01-20 07:05:44 | INFO |    Layer 2 (Mahalanobis): 1.09s
+2026-01-20 07:05:44 | INFO |    Layer 3 (Fusion): Combined
+2026-01-20 07:05:44 | INFO |    Layer 4a (Domain norm): 0.00s
+2026-01-20 07:05:44 | INFO |    Layer 4b (Section norm): 0.00s
+2026-01-20 07:05:44 | INFO |    Final score range: [-9.619, -4.542]
+2026-01-20 07:05:44 | INFO | 
+🎵 Extracting features for train split...
+2026-01-20 07:11:08 | INFO | ✅ Feature extraction complete for train
+2026-01-20 07:11:08 | INFO |    Embeddings shape: (1100, 2048)
+2026-01-20 07:11:08 | INFO |    Time: 323.9s (3.4 samples/s)
+2026-01-20 07:11:08 | INFO |    Mean embedding norm: 10.854
+2026-01-20 07:11:08 | INFO |    Std embedding norm: 0.668
+2026-01-20 07:11:08 | INFO | 
+🎵 Extracting features for test split...
+2026-01-20 07:12:03 | INFO | ✅ Feature extraction complete for test
+2026-01-20 07:12:03 | INFO |    Embeddings shape: (200, 2048)
+2026-01-20 07:12:03 | INFO |    Time: 55.0s (3.6 samples/s)
+2026-01-20 07:12:03 | INFO |    Mean embedding norm: 10.771
+2026-01-20 07:12:03 | INFO |    Std embedding norm: 0.515
+2026-01-20 07:12:03 | INFO | 
+🎯 Fitting anomaly detector...
+2026-01-20 07:12:03 | INFO |    Training samples: 1100
+2026-01-20 07:12:03 | INFO |    Embedding dimension: 2048
+2026-01-20 07:12:03 | INFO |    Unique sections: 1
+2026-01-20 07:12:04 | INFO |    Domain 0 baseline: μ=1.2712, σ=0.1911, n=1090
+2026-01-20 07:12:04 | INFO |    Domain 1 baseline: μ=1.6028, σ=0.1814, n=10
+2026-01-20 07:12:04 | INFO |    Section-specific stats computed for 1 sections
+2026-01-20 07:12:04 | INFO | 
+🔮 Computing anomaly scores...
+2026-01-20 07:12:04 | INFO |    Test samples: 200
+2026-01-20 07:12:04 | INFO |    Layer 1 (Multi-k): 0.14s
+2026-01-20 07:12:05 | INFO |    Layer 2 (Mahalanobis): 1.05s
+2026-01-20 07:12:05 | INFO |    Layer 3 (Fusion): Combined
+2026-01-20 07:12:05 | INFO |    Layer 4a (Domain norm): 0.00s
+2026-01-20 07:12:05 | INFO |    Layer 4b (Section norm): 0.00s
+2026-01-20 07:12:05 | INFO |    Final score range: [-48.841, -14.224]
+2026-01-20 07:12:06 | INFO | 
+🎵 Extracting features for train split...
+2026-01-20 07:17:35 | INFO | ✅ Feature extraction complete for train
+2026-01-20 07:17:35 | INFO |    Embeddings shape: (1100, 2048)
+2026-01-20 07:17:35 | INFO |    Time: 328.9s (3.3 samples/s)
+2026-01-20 07:17:35 | INFO |    Mean embedding norm: 10.604
+2026-01-20 07:17:35 | INFO |    Std embedding norm: 0.258
+2026-01-20 07:17:35 | INFO | 
+🎵 Extracting features for test split...
+2026-01-20 07:18:32 | INFO | ✅ Feature extraction complete for test
+2026-01-20 07:18:32 | INFO |    Embeddings shape: (200, 2048)
+2026-01-20 07:18:32 | INFO |    Time: 57.3s (3.5 samples/s)
+2026-01-20 07:18:32 | INFO |    Mean embedding norm: 10.667
+2026-01-20 07:18:32 | INFO |    Std embedding norm: 0.282
+2026-01-20 07:18:32 | INFO | 
+🎯 Fitting anomaly detector...
+2026-01-20 07:18:32 | INFO |    Training samples: 1100
+2026-01-20 07:18:32 | INFO |    Embedding dimension: 2048
+2026-01-20 07:18:32 | INFO |    Unique sections: 1
+2026-01-20 07:18:33 | INFO |    Domain 0 baseline: μ=1.2023, σ=0.1777, n=990
+2026-01-20 07:18:33 | INFO |    Domain 1 baseline: μ=0.9037, σ=0.2633, n=110
+2026-01-20 07:18:33 | INFO |    Section-specific stats computed for 1 sections
+2026-01-20 07:18:33 | INFO | 
+🔮 Computing anomaly scores...
+2026-01-20 07:18:33 | INFO |    Test samples: 200
+2026-01-20 07:18:33 | INFO |    Layer 1 (Multi-k): 0.11s
+2026-01-20 07:18:34 | INFO |    Layer 2 (Mahalanobis): 1.12s
+2026-01-20 07:18:34 | INFO |    Layer 3 (Fusion): Combined
+2026-01-20 07:18:34 | INFO |    Layer 4a (Domain norm): 0.00s
+2026-01-20 07:18:34 | INFO |    Layer 4b (Section norm): 0.00s
+2026-01-20 07:18:34 | INFO |    Final score range: [-37.512, -11.094]
+2026-01-20 07:18:34 | INFO | 
+🎵 Extracting features for train split...
+2026-01-20 07:23:47 | INFO | ✅ Feature extraction complete for train
+2026-01-20 07:23:47 | INFO |    Embeddings shape: (1100, 2048)
+2026-01-20 07:23:47 | INFO |    Time: 312.9s (3.5 samples/s)
+2026-01-20 07:23:47 | INFO |    Mean embedding norm: 11.426
+2026-01-20 07:23:47 | INFO |    Std embedding norm: 0.665
+2026-01-20 07:23:47 | INFO | 
+🎵 Extracting features for test split...
+2026-01-20 07:24:42 | INFO | ✅ Feature extraction complete for test
+2026-01-20 07:24:42 | INFO |    Embeddings shape: (200, 2048)
+2026-01-20 07:24:42 | INFO |    Time: 54.9s (3.6 samples/s)
+2026-01-20 07:24:42 | INFO |    Mean embedding norm: 11.300
+2026-01-20 07:24:42 | INFO |    Std embedding norm: 0.705
+2026-01-20 07:24:42 | INFO | 
+🎯 Fitting anomaly detector...
+2026-01-20 07:24:42 | INFO |    Training samples: 1100
+2026-01-20 07:24:42 | INFO |    Embedding dimension: 2048
+2026-01-20 07:24:42 | INFO |    Unique sections: 1
+2026-01-20 07:24:42 | INFO |    Domain 0 baseline: μ=0.8100, σ=0.1687, n=1090
+2026-01-20 07:24:42 | INFO |    Domain 1 baseline: μ=0.8580, σ=0.1639, n=10
+2026-01-20 07:24:42 | INFO |    Section-specific stats computed for 1 sections
+2026-01-20 07:24:42 | INFO | 
+🔮 Computing anomaly scores...
+2026-01-20 07:24:42 | INFO |    Test samples: 200
+2026-01-20 07:24:43 | INFO |    Layer 1 (Multi-k): 0.10s
+2026-01-20 07:24:43 | INFO |    Layer 2 (Mahalanobis): 0.92s
+2026-01-20 07:24:43 | INFO |    Layer 3 (Fusion): Combined
+2026-01-20 07:24:43 | INFO |    Layer 4a (Domain norm): 0.00s
+2026-01-20 07:24:43 | INFO |    Layer 4b (Section norm): 0.00s
+2026-01-20 07:24:43 | INFO |    Final score range: [-34.985, 0.977]

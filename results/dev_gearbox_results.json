@@ -1,0 +1,11 @@
+{
+  "machine": "dev_gearbox",
+  "auc_overall": 56.46,
+  "pauc": 10.799999999999999,
+  "official_score": 18.13166815343443,
+  "auc_source": 59.00000000000001,
+  "auc_target": 56.76,
+  "num_train": 1100,
+  "num_test": 200,
+  "time_minutes": 5.835654505093893
+}

@@ -1,0 +1,11 @@
+{
+  "machine": "dev_ToyCar",
+  "auc_overall": 53.38,
+  "pauc": 2.5999999999999996,
+  "official_score": 4.958485173276169,
+  "auc_source": 52.92,
+  "auc_target": 60.08000000000001,
+  "num_train": 1100,
+  "num_test": 200,
+  "time_minutes": 6.348341262340545
+}
